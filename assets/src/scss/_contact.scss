@@ -1,0 +1,84 @@
+.wpcf7-form {
+	@include container;
+	max-width: 40rem;
+
+	// wpcf7 adds these P tags, just use it as a wrapper
+	> p {
+		position: relative;
+		label {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			pointer-events: none;
+			text-transform: uppercase;
+			font-weight: 500;
+			letter-spacing: 0.1em;
+			font-size: 1.3rem;
+			transition: top .2s;
+			color: $gray-2;
+		}
+
+		.message {
+			top: 1.9rem;
+		}
+	}
+	input.wpcf7-text, textarea {
+		border: none;
+		border-bottom: 3px solid #efefef;
+		padding: 0.5em 0;
+		width: 100%;
+		background-color: transparent;
+		color: $gray-1;
+	}
+	textarea {
+		font-size: 1em;
+	}
+	// fancy label function
+	label.has-value {
+		top: 1.1em;
+		font-size: 0.75rem;
+		font-weight: 700;
+	}
+
+	textarea:focus, input:focus{
+		outline: none;
+	}
+
+	p:last-of-type {
+		text-align: center;
+	}
+
+	.submit {
+		margin-top: 1em;
+		padding: 1rem 4rem;
+		font-family: inherit;
+		background: transparent;
+		font-size: 1.8rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		border-width: 0.09rem;
+		border-style: solid;
+		border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);;
+		border-radius: 0.2rem;
+		@include link-button;
+	}
+
+	.wpcf7-not-valid-tip {
+		position: absolute;
+	}
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover, 
+	input:-webkit-autofill:focus,
+	textarea:-webkit-autofill,
+	textarea:-webkit-autofill:hover,
+	textarea:-webkit-autofill:focus,
+	select:-webkit-autofill,
+	select:-webkit-autofill:hover,
+	select:-webkit-autofill:focus {
+		border: 0;
+		-webkit-text-fill-color: $gray-1;
+		-webkit-box-shadow: 0;
+		transition: background-color 5000s ease-in-out 0s;
+	}
+}

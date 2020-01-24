@@ -1,0 +1,23 @@
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    
+    li {
+        font-size: 1.5em;
+        padding: 0 0.5em ;
+
+        & > *:hover {
+            color: $blue;
+        }
+    }
+    
+}
+
+.site-info {
+    padding: 2em 0 1em 0;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+

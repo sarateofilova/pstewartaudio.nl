@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+ .card-img {
+  background-image:url("https://images.unsplash.com/photo-1572510176982-e9b0dac331d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80");
+/*   position:relative; */
+  height: 120px;
+  width: 50%;
+  
+}
+</style>
+
+
+<script type="text/javascript">
+
+  $('.swiper-slide').each(function(index, element) {
+    var href = $(element).find('.card-img a').attr('href');
+    $(element).magnificPopup({
+      items: {
+        src: href
+      },
+      type: 'iframe'
+    });
+  });
+  
+          </script>
+</head>
+<body>
+
+        <div class="swiper-slide">
+              
+                <div class="card-img">
+                  <a href="https://open.spotify.com/embed/album/2MLftGuBUN6d9Fe7oEPpDO"></a>
+                </div>
+
+        </div>
+
+
+
+    
+</body>
+</html>

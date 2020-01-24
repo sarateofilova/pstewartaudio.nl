@@ -1,0 +1,63 @@
+html {
+    font: 16px/1.8 'Montserrat', sans-serif, 'Verdana';
+    font-display: swap;
+
+
+    @media only screen and (max-width: 700px) {
+        font: 19.5px/1.6   'Montserrat', sans-serif, 'Verdana';
+    }
+
+    @media only screen and (max-width: 900px) and (min-width: 705px) {
+        font: 18px/1.6   'Montserrat', sans-serif, 'Verdana';
+    }
+
+    @media only screen and (min-width: 2000px) {
+        font: 40px/1.6   'Montserrat', sans-serif, 'Verdana';
+    }
+}
+
+body, form, input, button, select, option, fieldset, legend {
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $gray-1;
+    font-weight: 500;
+    padding-bottom: 0.8em;
+}
+
+h1 { font-size: 2em;}
+h2 { font-size: 2em;}
+h3 { font-size: 1.6em;}
+h4 { font-size: 1.4em;}
+h5 { font-size: 1.2em;}
+h6 { font-size: 1em;}
+
+p {
+    padding-bottom: 1.5em;
+    color: $gray-2;
+}
+
+a {
+    text-decoration: none;
+    font-weight: normal;
+    color: $black;
+}
+
+li {
+    list-style-type: none;
+}
+
+div {
+    color: $black;
+}
+
+
+.entry-title {
+    @media only screen and (max-width: 370px) {
+        font-size: 1.5rem;
+    }
+    @media only screen and (max-width: 380px) and (min-width: 335px){
+        font-size: 1.7rem;
+    }
+}

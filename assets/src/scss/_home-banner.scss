@@ -1,0 +1,17 @@
+.banner {
+    margin-bottom: 4em;
+    .mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .banner {
+        .mobile {
+            display: block;
+        }
+        .desctop {
+            display: none;
+        }
+    }
+}

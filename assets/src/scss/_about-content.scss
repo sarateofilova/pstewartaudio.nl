@@ -1,0 +1,42 @@
+
+    article {
+        @include container;
+        padding: 2em 0;
+
+        .entry-title {
+            text-align: center;
+        }
+
+        .content {
+
+            .image {
+                margin-top: -2em;
+                margin-right: -3em;
+                float: right;
+                width: 40%;
+            }
+
+            .text {
+            }
+        }
+
+
+        
+    }
+
+
+@media screen and (max-width: 900px) {
+    article .content {
+        flex-direction: column;
+        .image {
+            margin-top: 0; 
+            margin-right: 0;
+            margin-bottom: 2em; 
+            width: 100%;
+
+        }
+        .text {
+            order: 2;
+        }
+    }
+}

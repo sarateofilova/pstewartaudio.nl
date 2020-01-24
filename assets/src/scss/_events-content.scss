@@ -1,0 +1,99 @@
+
+article.post-9 {
+    max-width: 100%;
+    // background-image: url("http://localhost:8888/patstewart/wp-content/uploads/2019/11/pat-stewart.jpg");
+    background-size: cover;
+    
+    .entry-title {
+        display: none;
+    }
+
+    .entry-content {
+        @include container;
+
+        .events {
+            @include container;
+            padding-bottom: 2.5em;
+        }
+
+        .events-category-title {
+            text-align: center;
+            padding-bottom: 0.4em;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: 330px) {
+                font-size: 1.5rem;
+            }
+            @media only screen and (max-width: 380px) and (min-width: 335px){
+                font-size: 1.75rem;
+            }
+        }
+        #events-category-title-first-of-type {
+            @media screen and (max-width: 900px) {
+                margin-top: 2em;  
+            }
+        }
+        .dash {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 2em;
+            width: 2em;
+            border-bottom: 3px solid $black;
+        }
+    }
+
+    .gigpress-artist-heading,
+    .gigpress-artist-heading > *{
+        @media screen and (max-width: 900px) {
+            & {
+                text-align: center;
+            }
+        }
+        padding-bottom: 0;
+        font-weight: 700;
+    }
+
+    .gigpress-table {
+        .gigpress-header {
+            display: none;
+        }
+        .gigpress-row {
+            
+            @media screen and (max-width: 900px) {
+                & {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+
+            td {
+                @media screen and (max-width: 900px) {
+                    & {
+                        flex: 1 0 100%;
+                        text-align: center;
+                    }
+                }        
+            }
+
+            .gigpress-more-info {
+                display: inline-block;
+                text-align: center;
+                @media screen and (max-width: 900px) {
+                    & {
+                        margin: 1em 0;
+                    }
+                }
+
+                a {
+                    @include link-button; 
+                    font-size: 1.1em;
+                    padding: 0.4rem;
+                }
+            }
+
+            & > * {
+                box-sizing: border-box;
+            }
+        }
+    }
+}

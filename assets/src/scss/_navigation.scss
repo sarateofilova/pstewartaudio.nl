@@ -1,0 +1,161 @@
+.site-title, 
+.site-description,
+.menu-main-menu-container-toggle {
+    display: none;
+}
+
+.site-branding {
+    padding: 0 1em;
+    a img {
+        width: 50px;
+        height: 50px;
+    }
+}
+    
+
+.main-navigation {
+    input {
+        display: none;
+    }
+    .menu-main-menu-container {
+        ul {
+            display: flex;
+            
+            li {
+                padding: 0.5em 1em;
+                color: $black;
+                font-size: 1.3em;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+
+                &:hover > *:hover {
+                    color: $blue;
+                }
+            }
+
+            .active {
+                color: $blue;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .site-branding {
+        padding: 0;
+    }
+    .main-navigation {
+        
+        label {
+            display: block;  
+            padding: 0; 
+            z-index: 100;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .menu-main-menu-container {   
+            display: none;
+
+        }
+
+        // Hamburger menu
+
+        label span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            
+            background: #cdcdcd;
+            border-radius: 3px;
+            
+            z-index: 1;
+            
+            transform-origin: 4px 0px;
+            
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            opacity 0.55s ease;
+        }
+
+        label span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        label span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+        /* 
+        * Transform all the slices of hamburger
+        * into a crossmark.
+        */
+        input:checked ~ label span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-8px, -16px);
+            background: #232323;
+        }
+
+        /*
+        * But let's hide the middle one.
+        */
+        input:checked ~ label span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        /*
+        * Ohyeah and the last one should go the other direction
+        */
+        input:checked ~ label span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(-3px, 13px);
+        }
+
+        //End Hamburger Menu
+
+
+        .menu-main-menu-container ul li, 
+        .menu-main-menu-container ul li a, 
+        #toggle-menu {
+            position: relative;
+            display: block;
+        }
+
+        .menu-main-menu-container ul li a {
+            transition: all .125s ease-in-out;
+            -webkit-transition: all .125s ease-in-out;
+        }
+
+
+        ul {
+            display: flex;
+            flex-flow: column;
+            padding: 2.5em 0 2em 0;
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            background: $white;
+            border-bottom: 1px solid $white-1;
+            box-shadow: -10px 4px 14px rgba(0,0,0,0.09);
+            border-radius: 5px;
+            z-index: 99;
+
+            li {
+                margin: 0.5em 0;
+                a {
+                    font-size: 1em;
+                    text-align: center;
+                }
+            }
+        }
+
+        input[type="checkbox"]:checked ~ .menu-main-menu-container {
+            display: block;
+        }
+
+    }
+}

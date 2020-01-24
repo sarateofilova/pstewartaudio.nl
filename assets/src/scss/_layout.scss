@@ -1,0 +1,69 @@
+
+.site {
+    background: $white;
+    max-width: 100%;
+    margin-top: 4em;
+
+    @media only screen and (max-width: 770px) {
+        margin-top: 0;
+    }
+
+    @media only screen and (max-width: 905px) and (min-width: 705px) {
+        border-top: 4em solid $black;
+    }
+
+    &-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.4em 1em 0.2em 1em;
+        position: fixed;
+        width: 100%;
+        height: 4em;
+        background: $white;
+        box-shadow: -10px 4px 14px rgba(0,0,0,0.09);
+        top:0; left: 0; right: 0;
+        opacity: 0.95;
+        z-index: 100;
+    }
+
+    &-content { 
+        .entry-title {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-align: center;
+            overflow: hidden;
+            
+            @media screen and (max-width: 900px) {
+                margin-top: 2em;
+            }
+        }
+    }
+
+    &-footer {
+        @include container;
+        padding: 1em 0;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    @include container;
+}
+
+
+@media screen and (max-width: 900px) {
+    .site-header {
+        justify-content: space-between;
+    }
+    .container {
+        @include container;
+        @include container-margin-mobile;
+    }
+}
+
+
